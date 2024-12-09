@@ -23,7 +23,7 @@ create table Avio(
     fabricant varchar(20),
     any_fabricacio init,
 );
-crete table Aeroport(
+create table Aeroport(
   codi varchar(4),
   pais varchar(40),
   ciutat varchar(40),
