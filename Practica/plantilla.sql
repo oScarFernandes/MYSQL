@@ -1,71 +1,79 @@
 /* *****************************************************
   INSTITUT TIC de Barcelona
-    CFGS DAM1B
-    Mòdul: 0484 Bases de dades. 
-    AUTORS: Akasha Karam
-    DATA: 09/12/2024
+  CFGS DAM1B
+  Mòdul: 0484 Bases de dades
+  AUTORS: Akasha Karam
+  DATA: 09/12/2024
 ****************************************************** */
 
--- Creació de les taules
---Companyia
+/* Creació de les taules */
 
-create table Companyia(
-  	nom varchar(40),
-    IATA varchar(6),
-    CODE3 varchar(6),
-    ICAO  varchar(6),
-    pais varchar(40)
+/* Companyia */
+CREATE TABLE Companyia (
+    nom VARCHAR(40),
+    IATA VARCHAR(6),
+    CODE3 VARCHAR(6),
+    ICAO VARCHAR(6),
+    pais VARCHAR(40)
 );
 
-create table Avio(
-  	num_serie varchar(30),
-    tipus varchar(10),
-    fabricant varchar(20),
-    any_fabricacio init,
-);
-create table Aeroport(
-  codi varchar(4),
-  pais varchar(40),
-  ciutat varchar(40),
-  IATA varchar(40),
-  nom varchar(55),
-  any_construccio init
-
+/* Avió */
+CREATE TABLE Avio (
+    num_serie VARCHAR(30),
+    tipus VARCHAR(10),
+    fabricant VARCHAR(20),
+    any_fabricacio INT
 );
 
-create table Mostrador(
-  numero init
+/* Aeroport */
+CREATE TABLE Aeroport (
+    codi VARCHAR(4),
+    pais VARCHAR(40),
+    ciutat VARCHAR(40),
+    IATA VARCHAR(6),
+    nom VARCHAR(55),
+    any_construccio INT
 );
 
-create table Personal (
-    num_empleat int(8),
-    nom varchar(25),
-    cognom varchar(35),
-    passaport varchar(20),
-    sou decimal(10, 2) 
+/* Mostrador */
+CREATE TABLE Mostrador (
+    numero INT
 );
 
-create table Hostessa (
-    num_empleat int(8) 
+/* Personal */
+CREATE TABLE Personal (
+    num_empleat INT,
+    nom VARCHAR(25),
+    cognom VARCHAR(35),
+    passaport VARCHAR(20),
+    sou DECIMAL(10, 2)
 );
 
-create table Pilot (
-    num_empleat int(8),
-    hores_vol int(4)
+/* Hostessa */
+CREATE TABLE Hostessa (
+    num_empleat INT
 );
 
-create table Passatger (
-    passaport varchar(20),
-    nom varchar(30),
-    cognom varchar(50),
-    email varchar(40),
-    data_naixement date,
-    genere char(1)
+/* Pilot */
+CREATE TABLE Pilot (
+    num_empleat INT,
+    hores_vol INT
 );
 
-create table Vol (
-    codi_vol varchar(9),
-    data_vol date,
-    durada time,
-    descripcio text
+/* Passatger */
+CREATE TABLE Passatger (
+    passaport VARCHAR(20),
+    nom VARCHAR(30),
+    cognom VARCHAR(50),
+    email VARCHAR(40),
+    data_naixement DATE,
+    genere CHAR(1)
+);
+
+/* Vol */
+CREATE TABLE Vol (
+    codi_vol VARCHAR(9),
+    data_vol DATE,
+    durada TIME,
+    descripcio TEXT
 );
