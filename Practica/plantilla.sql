@@ -65,6 +65,8 @@ CREATE TABLE Passatger (
     passaport VARCHAR(20),
     nom VARCHAR(30),
     cognom VARCHAR(50),
+    adreca VARCHAR(70),
+    telefon VARCHAR(9),
     email VARCHAR(40),
     data_naixement DATE,
     genere CHAR(1)
