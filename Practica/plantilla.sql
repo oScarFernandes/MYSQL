@@ -2,7 +2,7 @@
   INSTITUT TIC de Barcelona
   CFGS DAM1B
   Mòdul: 0484 Bases de dades
-  AUTORS: Akasha Karam
+  AUTORS: Akasha Karam, Lucas Óscar Fernandes Paredes
   DATA: 09/12/2024
 ****************************************************** */
 
